@@ -7,22 +7,7 @@ defmodule Cards do
     Returns a list of strings representing a deck of playing cards.
   """
   def create_deck do
-    values = [
-      "Ace",
-      "Two",
-      "Three",
-      "Four",
-      "Five",
-      "Six",
-      "Seven",
-      "Eight",
-      "Nine",
-      "Ten",
-      "Jack",
-      "Queen",
-      "King"
-    ]
-
+    values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"]
     suits = ["Spades", "Clubs", "Hearths", "Diamonds"]
 
     for suit <- suits, value <- values do
@@ -53,7 +38,7 @@ defmodule Cards do
 
   @doc """
     Divides a deck into a hand and the remainder of the deck
-    The `hand_size`argunment indicates how many cards should
+    The `hand_size`argument indicates how many cards should
     be in the hand.
 
   ## Examples
