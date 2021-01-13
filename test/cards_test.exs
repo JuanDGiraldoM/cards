@@ -8,7 +8,7 @@ defmodule CardsTest do
   end
 
   test "shuffling a deck randomizes it" do
-    cards = Cards.create_deck()
+    deck = Cards.create_deck()
     assert deck != Cards.shuffle(deck)
   end
 end
