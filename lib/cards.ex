@@ -103,3 +103,7 @@ end
 # Cards.save(deck, "my_deck")
 # Cards.load("my_deck")
 # Cards.create_hand(5)
+
+# colors = %{primary: "red", secondary: "blue"}
+# Map.put(colors, :primary, "blue")
+# %{colors | primary: "yellow"}

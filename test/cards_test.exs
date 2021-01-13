@@ -17,4 +17,13 @@ defmodule CardsTest do
     Cards.save(deck, "test_deck")
     assert deck == Cards.load("test_deck")
   end
+
+  test "updating values in a map" do
+    colors = %{primary: "red", secondary: "blue"}
+    colors1 = Map.put(colors, :primary, "yellow")
+    colors2 = %{colors | primary: "yellow"}
+    refute colors.primary === colors1.primary
+    refute colors === colors2
+    assert colors1 === colors2
+  end
 end
