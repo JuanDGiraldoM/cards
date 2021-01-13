@@ -38,7 +38,14 @@ defmodule Cards do
   end
 
   @doc """
-    Evaluate if the a deck contains a specific playing card.
+    Determines whether a deck contains a given card.
+
+  ## Examples
+
+      iex> deck = Cards.create_deck()
+      iex> Cards.contains?(deck, "Ace of Spades")
+      true
+
   """
   def contains?(deck, hand) do
     Enum.member?(deck, hand)
@@ -52,9 +59,9 @@ defmodule Cards do
   ## Examples
 
       iex> deck = Cards.create_deck()
-      iex> {hand, deck} = Cards.deal(deck, 1)
+      iex> {hand, _deck} = Cards.deal(deck, 1)
       iex> hand
-      ["Eight of Clubs"]
+      ["Ace of Spades"]
 
   """
   def deal(deck, hand_size) do
