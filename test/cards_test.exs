@@ -26,4 +26,12 @@ defmodule CardsTest do
     refute colors === colors2
     assert colors1 === colors2
   end
+
+  test "lists and tuples" do
+    colors = [{:primary, "red"}, {:secondary, "green"}]
+    assert colors[:primary] == "red"
+    colors_repeat = [primary: "red", primary: "red"]
+    [{:primary, color} | _tail] = colors_repeat
+    assert color == "red"
+  end
 end
