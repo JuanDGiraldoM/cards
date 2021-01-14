@@ -158,5 +158,5 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,vscode,intellij+all,elixir,erlang
 
-./cards/*
-./identicon/*
+/cards/*
+/identicon/*.png
