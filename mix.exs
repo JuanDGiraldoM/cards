@@ -1,9 +1,9 @@
-defmodule Cards.MixProject do
+defmodule ElixirCourse.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :course_elixir,
+      app: :elixir_course,
       version: "0.1.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
