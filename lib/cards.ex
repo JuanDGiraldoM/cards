@@ -72,8 +72,14 @@ defmodule Cards do
     Save a binaries file with the representation of the deck.
   """
   def save(deck, filename) do
+    path = "./cards"
+
+    if !File.exists?(path) do
+      File.mkdir("#{path}")
+    end
+
     binary = :erlang.term_to_binary(deck)
-    File.write(filename, binary)
+    File.write("./cards/#{filename}", binary)
   end
 
   @doc """

@@ -15,7 +15,7 @@ defmodule CardsTest do
   test "save and load file" do
     deck = Cards.create_deck()
     Cards.save(deck, "test_deck")
-    assert deck == Cards.load("test_deck")
+    assert deck == Cards.load("./cards/test_deck")
   end
 
   test "updating values in a map" do
